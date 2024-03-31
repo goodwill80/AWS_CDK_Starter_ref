@@ -8,7 +8,9 @@ import { BucketTagger } from './Tagger';
 
 const app = new cdk.App();
 // new CdkStarterStack(app, 'CdkStarterStack');
+// Stack 1
 const photosStack = new PhotoImageStack(app, 'PhotoImageStack');
+// Stack 2
 new PhotoHandlerStack(app, 'PhotoHandlerStack', {
   targetBucketArn: photosStack.photoBucketArn,
 });
